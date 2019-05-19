@@ -1,0 +1,80 @@
+.TH MISSIDENTIFY "1" "v1.0 \- 20 Feb 2008" "Jesse Kornblum" "Jesse Kornblum"
+
+.SH NAME
+missidentify - Find executable files without an executable extension
+
+.SH SYNOPSIS
+.B missidentify [\-rqablv] [-s|-S len] [\-Vh] [FILES]
+
+.SH DESCRIPTION
+.PP
+Miss Identify looks at the header of every file it processes and determines
+if it is a PE executable (Windows executable). Such files can include programs,
+device drivers, and DLLs. By default the program displays the filename if
+the extension of the file does not match one of the known executable 
+extensions (.exe, .com, .sys, or .dll). Other options can make the program
+display the filename of all executable files.
+
+.TP
+\fB\-r\fR
+Enables recursive mode. All subdirectories are traversed. Please note
+that recursive mode cannot be used to examine all files of a given 
+file extension. For example, calling missidentify -r *.txt will examine
+all files in \fIdirectories\fR that end in .txt. 
+
+.TP
+\fB\-q\fR
+Silent mode. All error messages except fatal errors are surpressed.
+
+.TP
+\fB\-a\fR
+Display filenames of all executables
+
+.TP
+\fB\-b\fR
+Enables bare mode. Strips any leading directory information from 
+displayed filenames.
+This flag may not be used in conjunction with the \-l flag.
+
+.TP
+\fB\-l\fR
+Enables relative file paths. Instead of printing the absolute path for
+each file, displays the relative file path as indicated on the command 
+line. 
+This flag may not be used in conjunction with the \-b flag.
+
+.TP
+\fB\-v\fR
+Verbose mode. Displays the name of every 10th file as a progress indicator.
+
+.TP
+\fB\-s\-S len\fR
+Prints strings of length len with each filename. With lowercase letter,
+puts filename before string. With uppercase letter, puts strings before
+filename.
+
+.TP
+\fB\-h\fR
+Show a help screen and exit.
+
+.TP
+\fB\-V\fR
+Show the version number and exit.
+
+.SH BUGS
+The program can be fooled by any file with more than 1024 bytes between
+the MZ header and the PE header.
+
+.SH AUTHOR
+Miss Identify was written by Jesse Kornblum
+.br
+http://missidentify.sf.net/
+
+.SH COPYRIGHT
+Copyright (C) 2008 Jesse Kornblum. This is free software. You may
+redistribute copies of it under the terms of the GNU General Public
+License version 2. There is NO WARRANTY. See the file COPYING for
+more details.
+
+.SH SEE ALSO
+\fBfile\fR(1)

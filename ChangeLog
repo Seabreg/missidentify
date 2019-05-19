@@ -1,0 +1,63 @@
+2008-02-19 Jesse Kornblum <research@jessekornblum.com>
+
+	* Fixed illegal filename error handling to use Unicode
+	  error display function.
+
+	* Updated packaging and README file
+	
+	* Version bump to 1.0
+
+2008-02-15 Jesse Kornblum <research@jessekornblum.com>
+
+	* Completed conversion to allow Unicode filenames.
+	  Copied a few more functions from the md5deep project.
+
+	* Checked code into Subversion repository
+
+	* Version bump to 0.9 in preparation for release
+
+	* Cast VERBOSE_DISPLAY_NUM to uint64_t in usage message to avoid
+	  crash on OS X.
+
+	* Added $Id$ tags to source code
+	
+
+2008-02-04 Jesse Kornblum <research@jessekornblum.com>
+
+	* Started conversion to allow Unicode filenames, not
+	  finished yet
+	
+	* Moved previous ChangeLog file to NEWS
+	
+	* Fixed potentially fatal error in main.c that called,
+	  ironically enough, fatal_error().
+
+	* Added counting of number of files processed for displaying
+	  current filename being processed
+
+	
+2007-09-14 Jesse Kornblum <research@jessekornblum.com>
+
+	* Added -s and -S modes to capture strings
+
+	
+2007-08-12 Jesse Kornblum <research@jessekornblum.com>	
+
+	* Increased buffer size to 8KB to prevent underreads
+
+	* Added allowed executable extensions:
+	  cpl, hxs, hxi, olb, rll, and tlb.
+
+	
+2007-07-24 Jesse Kornblum <research@jessekornblum.com>	
+
+	* Fixed basic MZ check to work on little endian systems
+
+	* Removed fcntl.h from configuration
+
+	* Fixed typo in man page
+
+	
+2007-07-23 Jesse Kornblum <research@jessekornblum.com>	
+	
+	* Proof of concept 

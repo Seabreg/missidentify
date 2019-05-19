@@ -1,0 +1,23 @@
+
+This is Miss Identify.
+
+Complete documentation is available at http://missidentify.sf.net/.
+
+This archive includes usage instructions, news about changes in the program,
+and this readme file. You should also find a small Win32 executable,
+sample.jpg. The source code for this app is in sample.c if you're curious.
+Running missidentify on sample.jpg should show you how the program can
+work. 
+
+C:\> ssdeep *
+c:\missidentify-1.0\sample.jpg
+
+C:\> ssdeep -a * 
+C:\missidentify-1.0\sample.jpg
+C:\missidentify-1.0\ssdeep.exe
+
+and so on. 
+
+Enjoy!
+
+Send comments to research@jessekornblum.com.
